@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/data-structure/Graph"
 )
 
@@ -20,7 +22,13 @@ func main() {
 	graph.AddEdge(nodeC, nodeD)
 
 	// طباعة الرسم البياني
+	fmt.Println(graph.HasEdge(nodeA,nodeC))
 	graph.PrintGraph()
+	graph.RemoveEdge(nodeA,nodeC)
+	fmt.Println("__________")
+	graph.PrintGraph()
+	fmt.Println(graph.HasEdge(nodeA,nodeC))
+
 }
 
 
