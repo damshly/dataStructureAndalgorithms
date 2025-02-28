@@ -32,7 +32,18 @@ func (l *LinkedList[T]) InsertAtHead(data T) {
 	newNode.next = l.Head
 	l.Head = newNode
 }
-
+func (l *LinkedList[T]) InsertAtTail(data T) {
+	newNode := &node[T]{data: data}
+	if l.Head == nil {
+		l.Head = newNode
+		return
+	}
+	current := l.Head
+	for current.next != nil {
+		current = current.next
+	}
+	current.next = newNode
+}
 func (l *LinkedList[T]) InsertAtIndex(data T, i int) error {
 	if i < 1 {
 		return fmt.Errorf("use InsertAtHead if you want to insert at the start of the list")

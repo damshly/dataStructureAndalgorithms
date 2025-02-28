@@ -2,10 +2,10 @@ package qands
 
 import (
 	"fmt"
-	"github.com/data-structure/ll"
+	"github.com/dataStructureAndalgorithms/ll"
 )
 
-type Stack[T any] struct {
+type Stack[T any] struct { 
     ll.LinkedList[T]
 }
 
